@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className={`text-7xl p-16 font-mono m-16 transform transition-opacity duration-1000 ease-in-out ${visibleIntro[1] ? 'opacity-100': 'opacity-0'}`}>
           <Image
-            src="/professionalphoto.jpg"
+            src="professionalphoto.jpg"
             alt="Me"
             width={800}
             height={800}
