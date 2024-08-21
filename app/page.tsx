@@ -77,7 +77,7 @@ export default function Home() {
   }, [xTranslation, width, duration, rerender])
 
   return (
-    <main className="flex flex-row justify-evenly min-h-screen mt-16 pt-16 font-mono">
+    <main className="flex flex-row justify-evenly w-full min-h-screen mt-16 pt-16 font-mono">
       <div className="flex flex-col">
         <div className={`space-y-4 transform transition-opacity shadow-2xl bg-navcover rounded-xl p-6 duration-1000 ease-in-out ${visibleIntro[0] ? 'opacity-100': 'opacity-0'}`}>
           <div className="flex flex-row space-x-8">
@@ -109,7 +109,7 @@ export default function Home() {
             </motion.div>
         </div>
       </div>
-      <div className={`transform transition-opacity duration-1000 ease-in-out ${visibleIntro[1] ? 'opacity-100': 'opacity-0'}`}>
+      <div className={`min-w-[200px] transform transition-opacity duration-1000 ease-in-out ${visibleIntro[1] ? 'opacity-100': 'opacity-0'}`}>
         <Image
           src="/professionalphoto.jpg"
           alt="Me"
