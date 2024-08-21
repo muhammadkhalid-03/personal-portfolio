@@ -7,7 +7,7 @@ import ImageComp from "../components/about/ImageComp";
 
 
 const AboutPage = () => {
-    const [visibleAbouts, setVisibleAbouts] = useState([false, false, false]);
+    const [visibleAbouts, setVisibleAbouts] = useState([false, false, false, false]);
 
     const images1 = [
         ["/python-svgrepo-com.svg", "Python"],
