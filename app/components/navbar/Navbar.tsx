@@ -6,7 +6,7 @@ import MenuLink from './MenuLink';
 const Navbar = () => {
     
     return (
-        <nav className="flex w-full items-center justify-between font-mono border-b p-2 md:p-4 min-w-[320px] bg-navcover z-10 overflow-x-hidden">
+        <nav className="flex w-full items-center justify-between font-mono border-b p-2 md:p-4 min-w-[320px] bg-navcover z-10">
                 <div className="flex items-center">
                     <Link href="/" className='flex flex-row items-center ml-5 md:ml-10 hover:cursor'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-14">
