@@ -32,7 +32,6 @@ const ProjectsPage = () => {
             </div>
             <div className="space-y-16 m-18">
                     <div className={`w-full max-w-4xl flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${visibleProjects[0] ? 'opacity-100' : 'opacity-0'}`}>
-                        
                         <div className="flex flex-col justify-center items-center">
                             <Link href="https://github.com/muhammadkhalid-03/djangocipher.git" className="text-3xl mb-4 hover:underline" target="_blank" passHref>Cipher Cracker</Link>
                             <p className="text-sm mb-12 text-center">A full-stack project designed to crack substitution ciphers using the Metropolis-Hastings algorithm & a pre-trained GPT-2 model.</p>
