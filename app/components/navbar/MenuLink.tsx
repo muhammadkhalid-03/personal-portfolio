@@ -8,7 +8,7 @@ const MenuLink = () => {
     const pathname = usePathname();
 
     return (
-        <div className='flex flex-row justify-center items-center space-x-16'>
+        <div className='flex flex-row items-center flex-grow space-x-4 md:space-x-6 lg:space-x-8 mr-8 md:mr-16'>
             {[
                 { name: 'Home', href: '/' },
                 { name: 'Projects', href: '/projects' },
@@ -19,7 +19,7 @@ const MenuLink = () => {
                 item.external ? (
                     <div
                         key={item.name}
-                        className='relative group pb-2 flex flex-col items-center'
+                        className='relative group pb-2 flex flex-col items-center flex-grow'
                     >
                         <a
                             href={item.href}
