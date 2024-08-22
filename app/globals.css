@@ -33,3 +33,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (max-width: 768px) {
+  nav.bg-navcover {
+    width: 100vw;
+    left: 0;
+  }
+}
