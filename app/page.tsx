@@ -38,12 +38,12 @@ export default function Home() {
           </div>
           <div className="flex flex-row justify-evenly items-center">
             <Link href="/projects" passHref>
-              <div className="border border-gray-300 rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
+              <div className="border border-gray-300 items-center justify-center rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
                 View my work
               </div>
             </Link>
             <Link href="/about" passHref>
-              <div className="border border-gray-300 rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
+              <div className="border border-gray-300 items-center justify-center rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
                 Get to know me!
               </div>
             </Link>
