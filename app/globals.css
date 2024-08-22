@@ -27,6 +27,14 @@ body {
 }
 
 
+.full-screen-nav {
+  background-color: #042f2e;
+  width: 100vw;
+  height: 10vh;
+  left: 0;
+  top: 0;
+}
+
 
 @layer utilities {
   .text-balance {
