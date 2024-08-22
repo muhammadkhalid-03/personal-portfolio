@@ -35,8 +35,8 @@ const Contact: FC = () => {
     reset();
   }
   return (
-    <div className='flex flex-col justify-center items-center mt-16 w-full font-mono'>
-      <div className="text-6xl mt-16 pt-16 mb-16">
+    <div className='flex flex-col justify-center items-center mt-16 w-full font-mono max-w-5xl'>
+      <div className="text-4xl sm:text-5xl md:text-6xl mt-16 pt-16 mb-16">
           <Typewriter 
               onInit={(typewriter) => {
                   typewriter.typeString("Contact")
@@ -49,11 +49,11 @@ const Contact: FC = () => {
           <Image
             src="/github-svgrepo-com.svg"
             alt="Github"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
           <Link href="https://github.com/muhammadkhalid-03" target="_blank" passHref>
-            <div className="border border-gray-300 rounded-full py-3 px-4 hover:bg-gray-800">
+            <div className="border border-gray-300 rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
                     GitHub
             </div>
           </Link>
@@ -66,7 +66,7 @@ const Contact: FC = () => {
             height={40}
           />
           <Link className="flex flex-row space-x-2 items-center" href="https://linkedin.com/in/muhammadkhalid003" target="_blank" passHref>
-            <div className="border border-gray-300 rounded-full py-3 px-4 hover:bg-gray-800">
+            <div className="border border-gray-300 rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800">
                 Linkedin
             </div>
           </Link>
