@@ -52,7 +52,7 @@ const Contact: FC = () => {
             width={40}
             height={40}
           />
-          <Link className=""  href="https://github.com/muhammadkhalid-03" target="_blank" passHref>
+          <Link href="https://github.com/muhammadkhalid-03" target="_blank" passHref>
             <div className="border border-gray-300 rounded-full py-3 px-4 hover:bg-gray-800">
                     GitHub
             </div>
@@ -120,7 +120,7 @@ const Contact: FC = () => {
             ></textarea>
             </div>
             <div>
-              <button className=' hover:bg-gray-700 rounded-md border border-gray-300 py-3 px-8 text-base font-semibold text-white outline-none'>
+              <button className='hover:bg-gray-700 rounded-md border border-gray-300 py-3 px-8 text-base font-semibold text-white outline-none'>
                 Submit
               </button>
             </div>

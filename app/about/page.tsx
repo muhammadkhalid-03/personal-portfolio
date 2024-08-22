@@ -38,7 +38,7 @@ const AboutPage = () => {
     }, []);
     
     return (
-        <main className="flex flex-col justify-center items-center font-mono min-h-screen p-6">
+        <main className="flex flex-col justify-center items-center font-mono min-h-screen p-6 mb-16">
             <div className="text-6xl mt-16 pt-16 mb-16">
                 <Typewriter 
                     onInit={(typewriter) => {
