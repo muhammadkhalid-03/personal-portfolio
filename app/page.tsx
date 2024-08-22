@@ -25,11 +25,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-row w-full justify-center sm:justify-evenly min-h-screen mt-8 sm:mt-16 pt-8 sm:pt-16 font-mono overflow-hidden">
-      <div className="flex flex-col space-y-4 sm:space-y-8 max-w-full">
+      <div className="flex flex-col space-y-4 sm:space-y-8 max-w-xl sm::max-w-2xl">
           <div className={`space-y-4 w-full transform transition-opacity shadow-2xl bg-navcover rounded-xl p-4 sm:p-6 duration-1000 ease-in-out ${visibleIntro[0] ? 'opacity-100': 'opacity-0'}`}>
             <div className="flex flex-row space-x-4 sm:space-x-8">
               <p className="text-2xl sm:text-6xl">Hi</p>
-              <Image src="/waving-hand-svgrepo-com.svg" alt="waving hand" width={50} height={50} className="" />
+              <Image src="/waving-hand-svgrepo-com.svg" alt="waving hand" width={50} height={50} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
             </div>
             <p className="text-2xl sm:text-6xl">I'm Muhammad</p>
             <div className="space-y-2 max-w-[500px]">
