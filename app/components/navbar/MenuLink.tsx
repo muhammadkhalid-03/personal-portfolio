@@ -8,7 +8,7 @@ const MenuLink = () => {
     const pathname = usePathname();
 
     return (
-        <div className='flex flex-row items-center space-x-4 md:space-x-6 lg:space-x-8'>
+        <div className='flex flex-row items-center space-x-4 md:space-x-6 lg:space-x-8 justify-end'>
             {[
                 { name: 'Home', href: '/' },
                 { name: 'Projects', href: '/projects' },
