@@ -26,7 +26,6 @@ export default function Home() {
   return (
     <main className="flex flex-row w-full justify-center sm:justify-evenly min-h-screen mt-8 sm:mt-16 pt-8 sm:pt-16 font-mono overflow-hidden">
       <div className="flex flex-col space-y-4 sm:space-y-8 max-w-xl sm::max-w-2xl">
-          <div className={`space-y-4 w-full transform transition-opacity shadow-2xl bg-navcover rounded-xl p-4 sm:p-6 duration-1000 ease-in-out ${visibleIntro[0] ? 'opacity-100': 'opacity-0'}`}>
             <div className="flex flex-row space-x-4 sm:space-x-8">
               <p className="text-2xl sm:text-6xl">Hi</p>
               <Image src="/waving-hand-svgrepo-com.svg" alt="waving hand" width={50} height={50} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
@@ -35,7 +34,6 @@ export default function Home() {
             <div className="space-y-2 max-w-[500px]">
               <p className="text-base sm:text-md mt-8">I'm a full-stack engineer, Computer Science major, and junior at Grinnell College. I love building new things & using my technical skills to bring innovative ideas to life.</p>
             </div>
-          </div>
           <div className="flex flex-row justify-evenly items-center">
             <Link href="/projects" passHref>
               <div className="border border-gray-300 rounded-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-6 lg:py-5 lg:px-8 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-800 text-center">
