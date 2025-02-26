@@ -56,8 +56,8 @@ const AboutPage = () => {
                         </svg>
                         <div className="relative w-full bg-emerald-800 rounded-lg p-4 sm:p-6 shadow-lg text-md max-w-full fade-border">
                             <p>
-                                I worked as a Research Assistant at the <Link href="https://elbica.cs.grinnell.edu/start-here/" target="_blank" className="text-custom1">ELBICA Lab</Link>
-                                at Grinnell in 2024 summer as well as the fall 2024 semester under <Link href="https://eliott-fernanda.cs.grinnell.edu/home/" target="_blank" className="text-custom1">Dr. Fernanda Eliott.</Link> During
+                                I worked as a Research Assistant at the <Link href="https://elbica.cs.grinnell.edu/start-here/" target="_blank" className="text-custom1">ELBICA Lab</Link> at Grinnell
+                                Grinnell in 2024 summer as well as the fall 2024 semester under <Link href="https://eliott-fernanda.cs.grinnell.edu/home/" target="_blank" className="text-custom1">Dr. Fernanda Eliott.</Link> During
                                 my time at the lab, I explored distributed representations in AI and multi-modal data for causal inference. 
                                 Last summer in 2023, I was an intern at <Link href="https://10pearls.com" target="_blank" className="text-custom1">10Pearls, Pakistan</Link> where
                                 I worked as a full-stack engineering intern on a fitness tracking application. 
@@ -98,7 +98,7 @@ const AboutPage = () => {
                             <p>
                                 I’m currently a Junior at <Link href="https://www.grinnell.edu" target="_blank"
                                 className="text-custom1">Grinnell College</Link> graduating in May 2026. 
-                                I’m majoring in Computer Science & minoring in Statistics. Currently, I serve on the leadership team
+                                I’m majoring in Computer Science & minoring in Statistics. I serve on the leadership team
                                 for the South Asian Student Organization (SASO) - one of the biggest organizations on campus. 
                                 I'm also the president of the Muslim Student Organization (MSA) and the Pakistani Student Organization 
                                 (PSO) at Grinnell. Through my work in these student organizations, I help allocate organizational resources,
