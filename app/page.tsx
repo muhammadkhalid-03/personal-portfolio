@@ -33,7 +33,10 @@ export default function Home() {
             </div>
             <p className="text-2xl sm:text-6xl">I'm Muhammad</p>
             <div className="space-y-2 max-w-[500px]">
-              <p className="text-base sm:text-md mt-8">I'm a full-stack engineer, Computer Science major, and junior at Grinnell College. I love building new things & using my technical skills to bring innovative ideas to life.</p>
+              <p className="text-base sm:text-md mt-8">I'm a full-stack engineer, Computer Science major, and junior at Grinnell College. 
+                I love building new things & using my technical skills to bring innovative ideas to life.</p>
+              <p className="text-base sm:text-md mt-8">I'm currently looking for summer 2025
+              internships!</p>
             </div>
           </div>
           <div className="flex flex-row justify-evenly items-center">
