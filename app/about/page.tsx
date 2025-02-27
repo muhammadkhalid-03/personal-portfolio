@@ -56,10 +56,12 @@ const AboutPage = () => {
                         </svg>
                         <div className="relative w-full bg-emerald-800 rounded-lg p-4 sm:p-6 shadow-lg text-md max-w-full fade-border">
                             <p>
-                                Since the beginning of the summer of 2024, I’ve been a Research Assistant at the <Link href="https://elbica.cs.grinnell.edu/start-here/" target="_blank"
-                                className="text-custom1">ELBICA Lab</Link> where I collaborate with <Link href="https://eliott-fernanda.cs.grinnell.edu/home/" target="_blank"
-                                className="text-custom1">Professor Fernanda Eliott</Link> and her team to explore Distributed Representations in AI. Currenly, I'm looking into using multi-modal data for causal inference. Last summer (2023), I was an intern at <Link href="https://10pearls.com" target="_blank"
-                                className="text-custom1">10Pearls, Pakistan</Link> where I worked on a full-stack fitness tracking application. Since September of 2023 I’ve also been a Teaching Assistant for courses in Java & Racket. I love exploring new opportunities that allow me to grow as an engineer!
+                                I worked as a Research Assistant at the <Link href="https://elbica.cs.grinnell.edu/start-here/" target="_blank" className="text-custom1">ELBICA Lab</Link> at Grinnell
+                                Grinnell in 2024 summer as well as the fall 2024 semester under <Link href="https://eliott-fernanda.cs.grinnell.edu/home/" target="_blank" className="text-custom1">Dr. Fernanda Eliott.</Link> During
+                                my time at the lab, I explored distributed representations in AI and multi-modal data for causal inference. 
+                                Last summer in 2023, I was an intern at <Link href="https://10pearls.com" target="_blank" className="text-custom1">10Pearls, Pakistan</Link> where
+                                I worked as a full-stack engineering intern on a fitness tracking application. 
+                                I have also been a Teaching Assistant for courses in Java & Racket. Currently I work at the ITS Services desk at Grinnell.
                             </p>
                         </div>
                     </div>
@@ -87,15 +89,20 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className={`space-y-4  transform transition-opacity duration-1000 ease-in-out ${visibleAbouts[2] ? 'opacity-100' : 'opacity-0'}`}>
-                    <p className="text-xl sm:text-2xl">Academic:</p>
+                    <p className="text-xl sm:text-2xl">Academics & Extracurriculars:</p>
                     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-10">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-Width="1.5" stroke="currentColor" className="w-8 h-8 sm:w-10 sm:h-10">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                         </svg>
                         <div className="relative w-full bg-emerald-800 rounded-lg p-4 sm:p-6 shadow-lg text-md max-w-full fade-border">
                             <p>
-                            I’m currently a Junior at <Link href="https://www.grinnell.edu" target="_blank"
-                                className="text-custom1">Grinnell College</Link> graduating in May 2026. I’m majoring in Computer Science with a concentration in Statistics. I’m part of the cabinets for the South Asian Student Organization (SASO) & Pakistani Student Organization (PSO) where I regularly arrange community activities and advocate for students on campus.
+                                I’m currently a Junior at <Link href="https://www.grinnell.edu" target="_blank"
+                                className="text-custom1">Grinnell College</Link> graduating in May 2026. 
+                                I’m majoring in Computer Science & minoring in Statistics. I serve on the leadership team
+                                for the South Asian Student Organization (SASO) - one of the biggest organizations on campus. 
+                                I'm also the president of the Muslim Student Organization (MSA) and the Pakistani Student Organization 
+                                (PSO) at Grinnell. Through my work in these student organizations, I help allocate organizational resources,
+                                plan regular events, and advocate for students. 
                             </p>
                         </div>
                     </div>
@@ -108,7 +115,8 @@ const AboutPage = () => {
                         </svg>
                         <div className="relative w-full bg-emerald-800 rounded-lg p-4 sm:p-6 shadow-lg text-md max-w-full fade-border">
                             <p>
-                                My free time usually revolves around going to the gym, watching movies/TV shows, and cycling. Ever since I moved off-campus, I’ve started cooking a whole lot which might turn into a new hobby :) I listen to a LOT of South Asian music as well as a good amount of English EDM and would love some recommendations!
+                                In my free time love going to the gym, watching movies/TV shows, and cycling. 
+                                Ever since I moved off-campus, I’ve started cooking a whole lot which might turn into a new hobby :)
                             </p>
                         </div>
                     </div>
