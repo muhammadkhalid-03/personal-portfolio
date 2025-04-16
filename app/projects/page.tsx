@@ -101,6 +101,10 @@ const ProjectsPage = () => {
                 />
               </div>
             </div>
+            <p className="text-sm mt-2">
+              Technologies: React Native, TypeScript, Django, PostgreSQL, Expo,
+              Zustand
+            </p>
           </div>
         </div>
         <div
@@ -131,6 +135,9 @@ const ProjectsPage = () => {
                 className="w-[50vw] border border-white object-cover aspect-square rounded"
               />
             </div>
+            <p className="text-sm mt-2">
+              Technologies: Python, Next.js, Django, Typescript
+            </p>
           </div>
         </div>
         <div
