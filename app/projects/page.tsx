@@ -43,7 +43,7 @@ const ProjectsPage = () => {
             <h2 className="text-3xl mb-2">Pioneer Mart</h2>
             <Link
               href="https://github.com/kimseung-gc/Pioneer_Mart"
-              className="text-sm text-blue-200 mb-4 text-blue-200 hover:underline"
+              className="text-sm text-center text-blue-200 mb-4 text-blue-200 hover:underline"
               target="_blank"
               passHref
             >
@@ -101,7 +101,7 @@ const ProjectsPage = () => {
                 />
               </div>
             </div>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 text-center">
               Technologies: React Native, TypeScript, Django, PostgreSQL, Expo,
               Zustand
             </p>
@@ -116,7 +116,7 @@ const ProjectsPage = () => {
             <h2 className="text-3xl mb-2">Cipher Cracker</h2>
             <Link
               href="https://github.com/muhammadkhalid-03/djangocipher.git"
-              className="text-sm text-blue-200 mb-4 text-blue-200 hover:underline"
+              className="text-sm text-center text-blue-200 mb-4 text-blue-200 hover:underline"
               target="_blank"
               passHref
             >
@@ -135,7 +135,7 @@ const ProjectsPage = () => {
                 className="w-[50vw] border border-white object-cover aspect-square rounded"
               />
             </div>
-            <p className="text-sm mt-2">
+            <p className="text-sm text-center mt-2">
               Technologies: Python, Next.js, Django, Typescript
             </p>
           </div>
@@ -149,7 +149,7 @@ const ProjectsPage = () => {
             <h2 className="text-3xl mb-2">Gradient Descent</h2>
             <Link
               href="https://github.com/muhammadkhalid-03/gradient-descent.git"
-              className="text-sm text-blue-200 mb-4 hover:underline"
+              className="text-sm text-center text-blue-200 mb-4 hover:underline"
               target="_blank"
               passHref
             >
@@ -190,7 +190,7 @@ const ProjectsPage = () => {
             <h2 className="text-3xl mb-2">Genetic Data Fitting</h2>
             <Link
               href="https://github.com/muhammadkhalid-03/genetic-data-fitting.git"
-              className="text-sm text-blue-200 mb-4 hover:underline"
+              className="text-sm text-center text-blue-200 mb-4 hover:underline"
               target="_blank"
               passHref
             >
