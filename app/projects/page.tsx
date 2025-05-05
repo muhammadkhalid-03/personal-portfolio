@@ -19,7 +19,7 @@ const ProjectsPage = () => {
             prev.map((v, i) => (i === index ? true : v))
           );
         }, index * 700)
-      ); // Adjust the delay (500ms) as needed
+      ); // Adjust the delay (700ms) as needed
     });
 
     return () => timeouts.forEach((timeout) => clearTimeout(timeout));
@@ -41,14 +41,24 @@ const ProjectsPage = () => {
         >
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-3xl mb-2">Pioneer Mart</h2>
-            <Link
-              href="https://github.com/kimseung-gc/Pioneer_Mart"
-              className="text-sm text-blue-200 mb-4 text-blue-200 hover:underline"
-              target="_blank"
-              passHref
-            >
-              https://github.com/kimseung-gc/Pioneer_Mart
-            </Link>
+            <div className="flex flex-row space-x-4 mb-4">
+              <Link
+                href="https://github.com/kimseung-gc/Pioneer_Mart"
+                className="text-sm text-blue-200 hover:underline"
+                target="_blank"
+                passHref
+              >
+                GitHub Repository
+              </Link>
+              <span className="text-sm">•</span>
+              <Link
+                href="/privacy-policy"
+                className="text-sm text-blue-200 hover:underline"
+                passHref
+              >
+                Privacy Policy
+              </Link>
+            </div>
             <p className="text-sm mb-12 text-center">
               A full-stack online marketplace mobile application designed for
               Grinnell College students, faculty, and staff to buy and sell
@@ -153,11 +163,11 @@ const ProjectsPage = () => {
               target="_blank"
               passHref
             >
-              https://github.com/muhammadkhalid-03/gradient-descent.git"
+              https://github.com/muhammadkhalid-03/gradient-descent.git
             </Link>
             <p className="text-sm mb-8 text-center">
-              A python implementation of Gradient Descent and Newton's method to
-              find the max/min of functions in multiple dimensions.
+              A python implementation of Gradient Descent and Newton&apos;s
+              method to find the max/min of functions in multiple dimensions.
             </p>
             <div className="flex flex-row justify-center items-center space-x-4">
               <div className="border border-gray-500 bg-black p-2 rounded-lg">
