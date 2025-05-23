@@ -40,10 +40,10 @@ const ProjectsPage = () => {
           }`}
         >
           <div className="flex flex-col justify-center items-center">
-            <h2 className="text-3xl mb-2">Pioneer Mart</h2>
+            <h2 className="text-3xl mb-2">PioneerMart</h2>
             <div className="flex flex-row space-x-4 mb-4">
               <Link
-                href="https://github.com/kimseung-gc/Pioneer_Mart"
+                href="https://github.com/muhammadkhalid-03/Pioneer_Mart"
                 className="text-sm text-blue-200 hover:underline"
                 target="_blank"
                 passHref
@@ -114,6 +114,12 @@ const ProjectsPage = () => {
             <p className="text-sm mt-2 text-center">
               Technologies: React Native, TypeScript, Django, PostgreSQL, Expo,
               Zustand
+            </p>
+            <p className="text-sm mt-12 text-center text-gray-600">
+              Note: The Github repository linked here is forked from the main
+              repository and serves our web app. The original repository is
+              private. We hope to continue working on the project as our user
+              base continues to grow.
             </p>
           </div>
         </div>
