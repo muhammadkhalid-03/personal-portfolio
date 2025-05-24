@@ -6,9 +6,44 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import NextVideo from "next-video";
 import ccMovie2 from "@/videos/ccMovie2.mp4";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectsPage = () => {
   const [visibleProjects, setVisibleProjects] = useState([false, false, false]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const pioneerMartImages = [
+    {
+      src: "/project photos/pioneermart/login.jpg",
+      alt: "Pioneer Mart Sign In Screen",
+      width: 500,
+      height: 500,
+    },
+    {
+      src: "/project photos/pioneermart/home.png",
+      alt: "Pioneer Mart Home Screen",
+      width: 500,
+      height: 500,
+    },
+    {
+      src: "/project photos/pioneermart/additem.png",
+      alt: "Pioneer Mart Add Item Screen",
+      width: 500,
+      height: 500,
+    },
+    {
+      src: "/project photos/pioneermart/notification.png",
+      alt: "Pioneer Mart Chat Screen",
+      width: 500,
+      height: 500,
+    },
+    {
+      src: "/project photos/pioneermart/profile.png",
+      alt: "Pioneer Mart Profile Screen",
+      width: 500,
+      height: 500,
+    },
+  ];
 
   useEffect(() => {
     const timeouts: NodeJS.Timeout[] = [];
@@ -24,6 +59,22 @@ const ProjectsPage = () => {
 
     return () => timeouts.forEach((timeout) => clearTimeout(timeout));
   }, []);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === pioneerMartImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? pioneerMartImages.length - 1 : prev - 1
+    );
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
   return (
     <main className="flex flex-col justify-center items-center min-h-screen font-mono p-6 mb-16">
       <div className="text-6xl mt-16 pt-16 mb-16">
@@ -33,15 +84,15 @@ const ProjectsPage = () => {
           }}
         />
       </div>
-      <div className="space-y-16 m-18">
+      <div className="space-y-16 m-18 text-center">
         <div
-          className={`w-full max-w-4xl flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
+          className={`w-[80%] max-w-4xl mx-auto flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
             visibleProjects[0] ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center items-center">
-            <h2 className="text-3xl mb-2">PioneerMart</h2>
-            <div className="flex flex-row space-x-4 mb-4">
+            <h2 className="text-3xl mb-2">Pioneer Mart</h2>
+            <div className="flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4 my-4 items-center">
               <Link
                 href="https://github.com/muhammadkhalid-03/Pioneer_Mart"
                 className="text-sm text-blue-200 hover:underline"
@@ -64,51 +115,50 @@ const ProjectsPage = () => {
               Grinnell College students, faculty, and staff to buy and sell
               second-hand items.
             </p>
-            <div className="flex flex-row justify-center items-center space-x-4">
-              <div className="">
-                <Image
-                  src="/project photos/SignIn.png"
-                  alt="fitA"
-                  width={500}
-                  height={500}
-                  className="object-cover rounded-lg"
-                />
+
+            {/* Image Carousel */}
+            <div className="w-full max-w-2xl mb-6">
+              <div className="overflow-hidden rounded-lg bg-gray-800 mb-4">
+                <div className="flex justify-center items-center h-60 sm:h-72 md:h-96">
+                  <Image
+                    src={pioneerMartImages[currentImageIndex].src}
+                    alt={pioneerMartImages[currentImageIndex].alt}
+                    className="max-h-full max-w-full object-contain rounded-lg"
+                    width={pioneerMartImages[currentImageIndex].width}
+                    height={pioneerMartImages[currentImageIndex].height}
+                  />
+                </div>
               </div>
-              <div className="">
-                <Image
-                  src="/project photos/home.png"
-                  alt="fitB"
-                  width={500}
-                  height={500}
-                  className="object-cover rounded-lg"
-                />
+
+              {/* Navigation Arrows */}
+              <div className="flex justify-between items-center mb-4">
+                <button
+                  onClick={prevImage}
+                  className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                >
+                  <ChevronRight size={24} />
+                </button>
               </div>
-              <div className="">
-                <Image
-                  src="/project photos/additem.png"
-                  alt="fitC"
-                  width={500}
-                  height={500}
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/project photos/chat.png"
-                  alt="fitC"
-                  width={400}
-                  height={400}
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/project photos/profile.png"
-                  alt="fitD"
-                  width={500}
-                  height={500}
-                  className="object-cover rounded-lg"
-                />
+
+              {/* Dot Indicators */}
+              <div className="flex justify-center space-x-2">
+                {pioneerMartImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                      index === currentImageIndex
+                        ? "bg-blue-500"
+                        : "bg-gray-500 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
             <p className="text-sm mt-2 text-center">
@@ -124,8 +174,8 @@ const ProjectsPage = () => {
           </div>
         </div>
         <div
-          className={`w-full max-w-4xl flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
-            visibleProjects[0] ? "opacity-100" : "opacity-0"
+          className={`w-[80%] max-w-4xl mx-auto flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
+            visibleProjects[1] ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center items-center">
@@ -157,8 +207,8 @@ const ProjectsPage = () => {
           </div>
         </div>
         <div
-          className={`w-full max-w-4xl flex flex-col p-12 mb-16 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
-            visibleProjects[1] ? "opacity-100" : "opacity-0"
+          className={`w-[80%] max-w-4xl mx-auto flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
+            visibleProjects[2] ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center items-center">
@@ -198,8 +248,8 @@ const ProjectsPage = () => {
           </div>
         </div>
         <div
-          className={`w-full max-w-4xl flex flex-col p-12 mb-16 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
-            visibleProjects[2] ? "opacity-100" : "opacity-0"
+          className={`w-[80%] max-w-4xl mx-auto flex flex-col p-12 rounded-xl bg-navcover transform transition-opacity duration-1000 ease-in-out ${
+            visibleProjects[3] ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center items-center">
