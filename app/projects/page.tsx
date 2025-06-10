@@ -190,7 +190,8 @@ const ProjectsPage = () => {
             </Link>
             <p className="text-sm mb-12 text-center">
               A full-stack project designed to crack substitution ciphers using
-              the Metropolis-Hastings algorithm & a pre-trained GPT-2 model.
+              the Metropolis-Hastings algorithm, a serverless backend, and the
+              ChatGPT API.
             </p>
             <div>
               <p className="text-md text-center mb-4 underline underline-offset-4">
