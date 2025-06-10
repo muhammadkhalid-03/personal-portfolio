@@ -166,7 +166,7 @@ const ProjectsPage = () => {
             </div>
             <p className="text-sm mt-2 text-center">
               Technologies: React Native, TypeScript, Django, PostgreSQL, Expo,
-              AWS S3 Zustand
+              AWS S3, Zustand
             </p>
             <p className="text-sm mt-12 text-center text-gray-600">
               Note: The Github repository linked here is forked from the main
