@@ -113,7 +113,10 @@ const ProjectsPage = () => {
             <p className="text-sm mb-12 text-center">
               A full-stack online marketplace mobile application designed for
               Grinnell College students, faculty, and staff to buy and sell
-              second-hand items.
+              second-hand items. This project has real-time chat w/ websockets,
+              automated image/text moderation thru a third party API, cloud
+              object storage thru AWS S3, secure OTP authentication and many
+              other features!
             </p>
 
             {/* Image Carousel */}
@@ -163,13 +166,13 @@ const ProjectsPage = () => {
             </div>
             <p className="text-sm mt-2 text-center">
               Technologies: React Native, TypeScript, Django, PostgreSQL, Expo,
-              Zustand
+              AWS S3 Zustand
             </p>
             <p className="text-sm mt-12 text-center text-gray-600">
               Note: The Github repository linked here is forked from the main
               repository and serves our web app. The original repository is
-              private. We hope to continue working on the project as our user
-              base continues to grow.
+              private due to security issues. I'm currently maintaining the
+              project as the user base continues to grow.
             </p>
           </div>
         </div>
@@ -190,8 +193,8 @@ const ProjectsPage = () => {
             </Link>
             <p className="text-sm mb-12 text-center">
               A full-stack project designed to crack substitution ciphers using
-              the Metropolis-Hastings algorithm, a serverless backend, and the
-              ChatGPT API.
+              the Metropolis-Hastings algorithm, a serverless backend (AWS
+              Lambda & API Gateway), and the ChatGPT API.
             </p>
             <div>
               <p className="text-md text-center mb-4 underline underline-offset-4">
