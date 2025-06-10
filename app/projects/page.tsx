@@ -202,7 +202,8 @@ const ProjectsPage = () => {
               />
             </div>
             <p className="text-sm text-center mt-2">
-              Technologies: Python, Next.js, Django, Typescript
+              Technologies: AWS Lambda, AWS API Gateway, Python, Next.js,
+              Typescript
             </p>
           </div>
         </div>
