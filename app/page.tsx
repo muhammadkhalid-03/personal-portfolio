@@ -63,8 +63,8 @@ export default function Home() {
 
         <div className="space-y-4 max-w-[500px]">
           <p className="text-sm sm:text-base md:text-lg">
-            I'm a full-stack engineer, Computer Science major, and junior at
-            Grinnell College. I love building new things & using my technical
+            I'm a full-stack engineer, Computer Science major, and rising senior
+            at Grinnell College. I love building new things & using my technical
             skills to bring innovative ideas to life.
           </p>
         </div>

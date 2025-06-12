@@ -183,14 +183,25 @@ const ProjectsPage = () => {
         >
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-3xl mb-2">Cipher Cracker</h2>
-            <Link
-              href="https://github.com/muhammadkhalid-03/djangocipher.git"
-              className="text-sm text-center text-blue-200 mb-4 text-blue-200 hover:underline"
-              target="_blank"
-              passHref
-            >
-              https://github.com/muhammadkhalid-03/djangocipher.git
-            </Link>
+            <div className="flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4 my-4 items-center">
+              <Link
+                href="http://cipher-cracker-gray.vercel.app"
+                className="text-sm text-blue-200 hover:underline"
+                target="_blank"
+                passHref
+              >
+                Website
+              </Link>
+              <span className="text-sm">•</span>
+              <Link
+                href="https://github.com/muhammadkhalid-03/djangocipher"
+                className="text-sm text-blue-200 hover:underline"
+                passHref
+                target="_blank"
+              >
+                GitHub Repo
+              </Link>
+            </div>
             <p className="text-sm mb-12 text-center">
               A full-stack project designed to crack substitution ciphers using
               the Metropolis-Hastings algorithm, a serverless backend (AWS
