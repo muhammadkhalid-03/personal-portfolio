@@ -81,11 +81,20 @@ const AboutPage = () => {
                 This summer (2025), I'm working with Professor Rodrigues at the
                 20C Text Lab at Grinnell to benchmark OCR-mLLM post-correction
                 for 20th century historical texts. In addition to this, I'm also
-                the lead developer and maintainer of PioneerMart, an online
-                marketplace officially available to the Grinnell community as of
-                May 2025. I've been working on this with the rest of the team
-                since January 2025. Last summer & fall semester (2024), I worked
-                as a Research Assistant at the{" "}
+                studying for my{" "}
+                <Link
+                  href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+                  target="_blank"
+                  className="text-custom1"
+                >
+                  AWS Solutions Architect Exam
+                </Link>{" "}
+                which I plan to give in August/September 2025 . Since January
+                2025, I've been the lead developer and maintainer of
+                PioneerMart, an online marketplace officially available to the
+                Grinnell community as of May 2025 (300+ active users). Last
+                summer & fall semester (2024), I worked as a Research Assistant
+                at the{" "}
                 <Link
                   href="https://elbica.cs.grinnell.edu/start-here/"
                   target="_blank"
@@ -113,7 +122,8 @@ const AboutPage = () => {
                 </Link>{" "}
                 where I worked as a full-stack engineering intern on a fitness
                 tracking application. I have also been a Teaching Assistant for
-                courses in Java & Racket. Currently I work as a student mentor
+                courses in Java & Racket. During the school semester in addition
+                to maintaining my app and schoolwork, I work as a student mentor
                 at{" "}
                 <Link
                   href="https://www.grinnell.edu/academics/centers-programs/data-analysis-and-social-inquiry-lab"
@@ -195,7 +205,7 @@ const AboutPage = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-Width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-8 h-8 sm:w-10 sm:h-10"
             >
