@@ -2,7 +2,7 @@
 
 ### Link:
 
-https://muhammad-khalid.vercel.app
+https://www.muhammadkhalid.dev
 
 ### Included Information:
 

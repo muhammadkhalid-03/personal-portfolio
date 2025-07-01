@@ -185,7 +185,7 @@ const ProjectsPage = () => {
             <h2 className="text-3xl mb-2">Cipher Cracker</h2>
             <div className="flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4 my-4 items-center">
               <Link
-                href="http://cipher-cracker-gray.vercel.app"
+                href="http://cipher-cracker.muhammadkhalid.dev"
                 className="text-sm text-blue-200 hover:underline"
                 target="_blank"
                 passHref
