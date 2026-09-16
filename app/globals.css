@@ -3,38 +3,92 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 255, 255;
-  --background-end-rgb: 0, 204, 204;
+  color-scheme: dark;
+  --page-background: #030807;
+  --surface: #0b1c1a;
+  --surface-strong: #102624;
+  --accent: #6ee7b7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 102, 102;
-    --background-end-rgb: 0, 51, 51;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-background);
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(16, 185, 129, 0.12), transparent 28rem),
+    linear-gradient(145deg, #020605 0%, #071413 45%, #0a2421 100%);
 }
 
-
-.full-screen-nav {
-  background-color: #042f2e;
-  width: 100vw;
-  height: 10vh;
-  left: 0;
-  top: 0;
+::selection {
+  color: #04110f;
+  background: var(--accent);
 }
 
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .page-heading {
+    @apply text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl;
+  }
+
+  .section-label {
+    @apply font-mono text-sm uppercase tracking-[0.2em] text-emerald-300;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-white/10 bg-[#0b1c1a]/90 shadow-xl shadow-black/10;
+  }
+
+  .accent-card {
+    @apply relative overflow-hidden;
+  }
+
+  .accent-card::before {
+    @apply absolute inset-y-0 left-0 w-1 bg-emerald-300;
+    content: "";
+  }
+
+  .button-primary,
+  .button-secondary,
+  .button-quiet {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 font-mono text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071413];
+  }
+
+  .button-primary {
+    @apply bg-emerald-300 text-[#071413] hover:-translate-y-0.5 hover:bg-emerald-200;
+  }
+
+  .button-secondary {
+    @apply border border-white/20 bg-white/5 text-white hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10;
+  }
+
+  .button-quiet {
+    @apply text-slate-300 hover:bg-white/5 hover:text-white;
+  }
+
+  .skill-pill {
+    @apply rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-xs text-slate-300;
+  }
+}
+
+.portrait-frame {
+  position: relative;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2.4rem;
+  background: linear-gradient(145deg, rgba(110, 231, 183, 0.2), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.35);
+}
 
 @layer utilities {
   .text-balance {
@@ -42,9 +96,17 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  nav.bg-navcover {
-    width: 100vw;
-    left: 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
