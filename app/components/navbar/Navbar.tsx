@@ -1,16 +1,18 @@
 "use client";
+
 import Link from "next/link";
-import Image from "next/image";
-import MenuLink from "./MenuLink";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import MenuLink from "./MenuLink";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null); //reference to the menu element
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -19,27 +21,42 @@ const Navbar = () => {
       }
     };
 
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsDropdownOpen(false);
+      }
+    };
+
     if (isDropdownOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEscape);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
     };
   }, [isDropdownOpen]);
+
   return (
-    <nav className="flex w-full items-center justify-between font-mono border-b md:p-4 full-screen-nav z-10 sm:w-full">
-      <div className="flex items-center">
-        <Link href="/" className="flex flex-row items-center ml-2 hover:cursor">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071413]/90 backdrop-blur-xl">
+      <nav
+        className="page-shell flex h-[4.5rem] items-center justify-between font-mono"
+        aria-label="Primary navigation"
+      >
+        <Link
+          href="/"
+          aria-label="Muhammad Khalid — Home"
+          className="rounded-lg text-white transition-colors hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-10 md:size-14 lg:size-14"
+            className="h-10 w-10"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -48,35 +65,56 @@ const Navbar = () => {
             />
           </svg>
         </Link>
-      </div>
-      <div className="flex items-center space-x-4 hidden md:flex">
-        <MenuLink type="flex-row" />
-      </div>
-      <button className="md:hidden p-2" onClick={toggleDropdown}>
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
-      {isDropdownOpen && (
-        <div
-          ref={menuRef}
-          className="absolute p-2 top-16 right-0 space-y-4 w-[30vw] bg-gray-800 z-30 hover:cursor rounded-xl shadow-lg md:hidden"
-        >
-          <MenuLink type="flex-col" onOpen={toggleDropdown} />
+
+        <div className="hidden md:block">
+          <MenuLink />
         </div>
-      )}
-    </nav>
+
+        <div className="relative md:hidden" ref={menuRef}>
+          <button
+            type="button"
+            className="rounded-lg p-2 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+            onClick={() => setIsDropdownOpen((open) => !open)}
+            aria-label={isDropdownOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={isDropdownOpen}
+            aria-controls="mobile-navigation"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              {isDropdownOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+
+          {isDropdownOpen && (
+            <div
+              id="mobile-navigation"
+              className="absolute right-0 top-12 min-w-48 rounded-xl border border-white/10 bg-[#102624] p-3 shadow-2xl"
+            >
+              <MenuLink mobile />
+            </div>
+          )}
+        </div>
+      </nav>
+    </header>
   );
 };
 
