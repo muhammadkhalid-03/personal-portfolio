@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@livekit/components-react": "^2.9.24",
+    "@livekit/components-styles": "^1.2.0",
+    "@livekit/protocol": "^1.52.1",
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^11.3.28",
+    "livekit-client": "^2.22.3",
+    "livekit-server-sdk": "^2.19.1",
     "lucide-react": "^0.511.0",
     "next": "15.5.24",
     "react": "^18",
